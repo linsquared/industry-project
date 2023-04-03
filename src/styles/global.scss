@@ -11,7 +11,7 @@
   
   
   body {
-    font-family: $avenir;
+
     margin: 0;
     background-image: url("../assets/images/iPhone\ 13\ Pro.png");
     background-repeat: no-repeat;
@@ -25,3 +25,7 @@
     margin: auto;
     position: relative;
   }
+
+  html {
+    font-size: 62.5%;
+}
