@@ -5,27 +5,31 @@
 
 //global 
 
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  
-  body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-    margin: 0;
-    background-image: url("../assets/images/iPhone\ 13\ Pro.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    width: 48rem;
-    height: 87.1rem;
-    overflow: auto;
-    padding-top: 2rem;
-    width: 43rem;
-    margin: auto;
-    position: relative;
-  }
 
-  html {
-    font-size: 62.5%;
+body {
+
+  margin: 0;
+  background-image: url("../assets/images/blackphone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 48rem;
+  // height: 87.1rem;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 2rem;
+  width: 43rem;
+  margin: auto;
+  position: relative;
+  font-family: 'Circular', Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
 }
