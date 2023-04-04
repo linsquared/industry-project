@@ -133,7 +133,7 @@ export default function HomePage() {
       <div className="homepage__container">
         {/* <Card commentModal={commentModal} setCommentModal={setCommentModal} /> */}
         {podcasts.map((podcast) => {
-          return <Card p={podcast} />;
+          return <Card p={podcast} commentModal={commentModal} setCommentModal={setCommentModal} />;
         })}
       </div>
       <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
