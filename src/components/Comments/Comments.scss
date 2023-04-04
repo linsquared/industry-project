@@ -10,7 +10,7 @@
     left: 2.5rem;
     border-radius: 8px;
     padding: 1.2rem;
-    z-index: 100;
+    z-index: 999;
 
 
     &__header {
@@ -164,7 +164,7 @@
         bottom: 4.7rem;
         background-image: url('../../assets/icons/post.png');
         background-repeat: no-repeat;
-        background-size: 4rem;
+        background-size: 2.5rem;
         background-position: 95% 50%;
         background-color: transparent;
         border: none;
