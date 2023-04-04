@@ -1,6 +1,6 @@
 @use "../../styles/global.scss" as*;
 
-.homepage{
+.homepage {
     height: 100vh;
     padding: 2rem;
     z-index: -32;
@@ -8,7 +8,7 @@
     height: 80.5rem;
    
 
-    &__navigation{
+    &__navigation {
         margin-top: 3rem;
         padding: 1.6rem;
         height: 4.3rem;
@@ -19,13 +19,14 @@
 
     }
 
-    &__cross{
+    &__cross {
         width: 4rem;
         height: 4rem;
         margin-right: 1.6rem;
-       
+
     }
-    &__container{
+
+    &__container {
         margin-top: 2.3rem;
         z-index: -10;
 

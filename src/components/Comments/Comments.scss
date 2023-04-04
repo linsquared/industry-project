@@ -10,6 +10,7 @@
     left: 2.5rem;
     border-radius: 8px;
     padding: 1.2rem;
+    z-index: 100;
 
 
     &__header {
@@ -20,7 +21,9 @@
 
     &__close {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        position: absolute;
+        right: 1rem;
     }
 
     &__user {
@@ -72,7 +75,8 @@
     &__actions {
         display: flex;
         justify-content: flex-end;
-        gap: 5rem;
+        padding-right: .8rem;
+        gap: 4rem;
         align-items: flex-end;
     }
 
@@ -81,9 +85,6 @@
         padding-top: .8rem;
         font-size: 1.7rem;
         color: white;
-        overflow-y: scroll;
-        height: 40rem;
-        width: 30rem;
     }
 
     &__bottom {
@@ -131,14 +132,53 @@
         width: 29.5rem;
         background-color: rgb(45, 46, 47);
         border: none;
+        // background-image: url('../../assets/icons/post.png');
+        // background-repeat: no-repeat;
+        // background-size: 4rem;
+        // background-position: 95% 50%;
 
-        // & ::placeholder {
-        //     padding: 2rem;
-        // }
+    }
+
+    &__like {
+        margin-right: 1rem;
+    }
+
+    &__addlikes {
+        font-size: 1.5rem;
+        color: white;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__wrapper {
+        overflow-y: scroll;
+        height: 40rem;
+        // width: 30rem;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 3rem;
+        width: 4rem;
+        height: 4rem;
+        bottom: 4.7rem;
+        background-image: url('../../assets/icons/post.png');
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        background-position: 95% 50%;
+        background-color: transparent;
+        border: none;
     }
 }
 
 ::placeholder {
-    padding: 1rem;
+    // padding: 1rem 1rem 1rem 0;
     font-size: 1.5rem;
+}
+
+textarea {
+    text-indent: 2rem;
+    padding-top: 1.2rem;
+    font-size: 1.6rem;
+    color: white;
 }

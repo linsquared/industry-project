@@ -4,7 +4,8 @@ import SideBar from "../SideBar/SideBar";
 import listen from "../../assets/images/listen.png";
 
 import "./Card.scss";
-export default function Card({ p }) {
+export default function Card({ commentModal, setCommentModal }) {
+
   return (
     <div className="card">
       <div className="card__main">
@@ -51,8 +52,7 @@ export default function Card({ p }) {
           <p className="bottom__time">Sat . {p.length}s</p>
         </div>
       </div>
-
-      <SideBar likes={p.likes} dislikes={p.dislikes} comments={p.comments} />
+      <SideBar commentModal={commentModal} setCommentModal={setCommentModal} />
     </div>
   );
 }

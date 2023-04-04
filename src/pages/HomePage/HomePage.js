@@ -2,6 +2,8 @@ import cross from "../../assets/icons/close.png";
 
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
+import Comments from "../../components/Comments/Comments";
+import { useState } from "react";
 import listen from "../../assets/images/listen.png";
 
 import "./HomePage.scss";
@@ -120,6 +122,8 @@ const podcasts = [
 ];
 
 export default function HomePage() {
+  const [commentModal, setCommentModal] = useState(false)
+
   return (
     <div className="homepage">
       <div className="homepage__navigation">
@@ -127,10 +131,13 @@ export default function HomePage() {
         <Button />
       </div>
       <div className="homepage__container">
+
+        {/* <Card commentModal={commentModal} setCommentModal={setCommentModal} /> */}
         {podcasts.map((podcast) => {
           return <Card p={podcast} />;
         })}
       </div>
+      <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
     </div>
   );
 }
