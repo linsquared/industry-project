@@ -3,4 +3,19 @@
 .homepage{
     height: 100vh;
     padding: 2rem;
+
+    &__navigation{
+        height: 4.3rem;
+        display: flex;
+        justify-content: flex-start;
+
+        align-items: center;
+
+    }
+
+    &__cross{
+        width: 4rem;
+        height: 4rem;
+       
+    }
 }

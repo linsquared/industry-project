@@ -1,0 +1,56 @@
+@use '../../styles/global.scss' as *;
+
+
+.card {
+    width: 35.1rem;
+    height: 49.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    margin: auto;
+
+
+    &__main{
+
+    }
+
+    &__soundtrack{
+
+    }
+    &__content {
+
+    }
+    &__title{
+
+    }
+  
+
+}
+
+.podcast {
+    &__name{
+
+    }
+
+    &__episode{
+
+    }
+
+    &__description{
+
+    }
+
+}
+
+.bottom {
+    &__icons{
+
+    }
+    &__icon{
+
+    }
+    &__time{
+
+    }
+
+}
