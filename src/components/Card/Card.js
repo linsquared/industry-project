@@ -5,8 +5,6 @@ import listen from "../../assets/images/listen.png";
 
 import "./Card.scss";
 export default function Card({ commentModal, setCommentModal, p }) {
-
-  console.log(p.image);
   return (
     <div className="card">
       <div className="card__main">
