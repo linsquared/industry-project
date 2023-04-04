@@ -59,7 +59,11 @@ p {
 
 }
 
-.labels {
+.label {
   font-size: 1.1rem;
   color: #ffffff;
+  margin: 0;
+  margin-bottom: 0.9rem;
+  display: flex;
+  justify-content: center;
 }

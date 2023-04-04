@@ -6,25 +6,37 @@
     height: 49.1rem;
     display: flex;
     flex-wrap: wrap;
-    background-color: red;
+    background: linear-gradient( #3C2991, #242424, #242424);
+    border-radius: 10px;
     margin: auto;
+    padding: 1.6rem;
+    position: relative;
 
 
     &__main{
+        width: 100%;
 
     }
 
     &__soundtrack{
+        height: 23.8rem;
 
     }
     &__content {
+        height: 15rem;
 
     }
     &__title{
 
+
     }
   
 
+
+}
+
+.test{
+    background-color: transparent;
 }
 
 .podcast {
@@ -37,20 +49,40 @@
     }
 
     &__description{
+        width: 29.2rem;
+        
 
     }
 
 }
 
 .bottom {
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 26.2rem;
     &__icons{
+        display: flex;
+
+        justify-content: flex-start;
+
+        align-content: center;
 
     }
     &__icon{
+        width: 2.4rem;
+        height: 2.4rem;
+        align-self: center;
 
     }
     &__time{
 
     }
-
+    &__dots{
+        width: 2.4rem;
+        height: 0.5rem;
+        align-self: center;
+        margin-left: 2.6rem;
+    }
 }
