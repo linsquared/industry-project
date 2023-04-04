@@ -7,6 +7,7 @@ import { useState } from "react";
 import Background from "../../components/Background/Background";
 
 import "./HomePage.scss";
+import Share from "../Share/Share";
 
 const podcasts = [
   {
@@ -123,6 +124,7 @@ const podcasts = [
 
 export default function HomePage() {
   const [commentModal, setCommentModal] = useState(false);
+  const [shareModal, setShareModal] = useState(false);
 
   return (
     <div className="homepage">
@@ -139,11 +141,15 @@ export default function HomePage() {
               p={podcast}
               commentModal={commentModal}
               setCommentModal={setCommentModal}
+              shareModal={shareModal}
+              setShareModal={setShareModal}
+
             />
           );
         })}
       </div>
       <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
+      <Share shareModal={shareModal} setShareModal={setShareModal} />
     </div>
   );
 }

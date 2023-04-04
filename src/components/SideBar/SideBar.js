@@ -8,11 +8,17 @@ import save from "../../assets/icons/save.png";
 import "./SideBar.scss";
 // import { useState } from "react";
 
-export default function SideBar({ commentModal, setCommentModal }) {
+export default function SideBar({ commentModal, setCommentModal, shareModal, setShareModal }) {
   // const [commentModal, setCommentModal] = useState(false)
 
   const openComments = () => {
     setCommentModal(true);
+  };
+
+  const openShare = () => {
+    setShareModal(true);
+    console.log(shareModal);
+
   };
 
   return (
@@ -39,7 +45,7 @@ export default function SideBar({ commentModal, setCommentModal }) {
           </div>
         </div>
         <div className="sidebar__bottom">
-          <img className="sidebar__iconb" alt="share icon" src={share} />
+          <img onClick={openShare} className="sidebar__iconb" alt="share icon" src={share} />
           <img className="sidebar__iconb" alt="save icon" src={save} />
         </div>
       </div>

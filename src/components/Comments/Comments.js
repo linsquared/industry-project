@@ -14,11 +14,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-const Comments = ({ commentModal, setCommentModal }) => {
+const Comments = ({ commentModal, setCommentModal, }) => {
     // func to close the comment box
     const closeComments = () => {
         setCommentModal(false)
     }
+
 
     const [userComments, setUserComments] = useState([])
 

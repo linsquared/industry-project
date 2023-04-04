@@ -3,7 +3,7 @@ import dots from "../../assets/icons/dots.png";
 import SideBar from "../SideBar/SideBar";
 
 import "./Card.scss";
-export default function Card({ commentModal, setCommentModal, p }) {
+export default function Card({ commentModal, setCommentModal, p, shareModal, setShareModal }) {
   return (
     <div className="card">
       <div className="card__main">
@@ -50,7 +50,7 @@ export default function Card({ commentModal, setCommentModal, p }) {
           <p className="bottom__time">Sat . {p.length}s</p>
         </div>
       </div>
-      <SideBar commentModal={commentModal} setCommentModal={setCommentModal} />
+      <SideBar commentModal={commentModal} setCommentModal={setCommentModal} shareModal={shareModal} setShareModal={setShareModal} />
     </div>
   );
 }

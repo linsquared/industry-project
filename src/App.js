@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "./assets/components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import Comments from "./components/Comments/Comments";
+import Share from "./pages/Share/Share";
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/comments" element={<Comments commentModal={commentModal} setCommentModal={setCommentModal} />} /> */}
+        {/* <Route path="/share" element={<Share />} /> */}
 
       </Routes>
     </BrowserRouter>
