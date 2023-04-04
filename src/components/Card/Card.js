@@ -1,7 +1,6 @@
 import plus from "../../assets/icons/plus.png";
 import dots from "../../assets/icons/dots.png";
 import SideBar from "../SideBar/SideBar";
-import listen from "../../assets/images/listen.png";
 
 import "./Card.scss";
 export default function Card({ commentModal, setCommentModal, p }) {
@@ -9,7 +8,7 @@ export default function Card({ commentModal, setCommentModal, p }) {
     <div className="card">
       <div className="card__main">
         <div className="image__container">
-          <img className="image" src={p.img} />
+          <img className="image" src={p.img} alt="podcast " />
         </div>
         <div className="soundtrack">
           <div className="soundtrack__container"></div>
@@ -45,8 +44,8 @@ export default function Card({ commentModal, setCommentModal, p }) {
 
         <div className="bottom">
           <div className="bottom__icons">
-            <img className="bottom__icon" src={plus} />
-            <img className="bottom__dots" src={dots} />
+            <img className="bottom__icon" alt="plus icon" src={plus} />
+            <img className="bottom__dots" alt="dots icon" src={dots} />
           </div>
           <p className="bottom__time">Sat . {p.length}s</p>
         </div>
