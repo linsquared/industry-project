@@ -11,6 +11,8 @@
     margin: auto;
     padding: 1.6rem;
     position: relative;
+    z-index:2;
+    margin-bottom: 3.5rem;
 
 
     &__main{
@@ -24,13 +26,19 @@
     }
     &__content {
         height: 15rem;
+        width: 30rem;
+        margin-bottom: 2.6rem;
+
 
     }
     &__title{
 
 
+
+
     }
-  
+
+   
 
 
 }
@@ -40,6 +48,7 @@
 }
 
 .podcast {
+    position: relative;
     &__name{
 
     }
@@ -49,7 +58,16 @@
     }
 
     &__description{
-        width: 29.2rem;
+        font-size: 1.5rem;
+        color: #A2A2A2;
+        height: 5rem;
+        width: 27rem;
+       position: absolute;
+       z-index: 999;
+       bottom: 19%;
+       
+       
+
         
 
     }
@@ -61,7 +79,10 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
-    width: 26.2rem;
+    width: 27.2rem;
+    position: absolute;
+    z-index: 999;
+    bottom: 4.2%;
     &__icons{
         display: flex;
 
@@ -86,3 +107,78 @@
         margin-left: 2.6rem;
     }
 }
+
+.container {
+ 
+
+
+    &__small{
+   
+
+    }
+}
+
+.soundtrack{
+    bottom:3.5%;
+    width: 34rem;
+   
+    z-index: 9;
+    position: absolute;
+    left:51.7%;
+    
+
+  
+
+
+
+    &__container{
+        width: 15.8rem;
+        height: 10rem;
+        border-radius: 10px;
+        background-color:#242424;
+        top:0;
+        position: absolute;
+  
+
+        &-small{
+            width: 11.9rem;
+            height: 5.8rem;
+            border-radius: 10px;
+            background-color: #242424;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 2;
+        
+
+        }
+
+        &__sound{
+           
+            position: absolute;
+        
+            left: 50%;
+            bottom:0
+
+            
+
+
+        }
+    }
+
+}
+
+.image {
+    width: 17.7rem;
+    height: 17.7rem;
+    border-radius: 10px;
+   
+
+    &__container {
+        height: 22rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
