@@ -1,6 +1,6 @@
 import "./SingleComment.scss";
-import like from "../../icons/comments_like.png";
-import dislike from "../../icons/comments_dislike.png";
+import like from "../../assets/icons/comments_like.png";
+import dislike from "../../assets/icons/comments_dislike.png";
 import axios from "axios";
 
 const SingleComment = ({
