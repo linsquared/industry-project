@@ -3,6 +3,10 @@
 .homepage{
     height: 100vh;
     padding: 2rem;
+    z-index: -32;
+    overflow-y: scroll;
+    height: 80.5rem;
+   
 
     &__navigation{
         margin-top: 3rem;
@@ -23,5 +27,7 @@
     }
     &__container{
         margin-top: 2.3rem;
+        z-index: -10;
+
     }
 }

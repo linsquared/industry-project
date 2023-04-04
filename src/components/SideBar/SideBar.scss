@@ -4,10 +4,12 @@
 .sidebar {
 
     position: absolute;
-    bottom:0;
+    top:3%;
     right: 3%;
-    height: 46.1rem;
+    height: 35.1rem;
     width: 4rem;
+    z-index: 999;
+
 
     &__main{
         margin-top: 8.1rem;

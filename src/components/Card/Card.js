@@ -1,45 +1,58 @@
 import plus from "../../assets/icons/plus.png";
 import dots from "../../assets/icons/dots.png";
 import SideBar from "../SideBar/SideBar";
+import listen from "../../assets/images/listen.png";
 
 import "./Card.scss";
-export default function Card() {
+export default function Card({ p }) {
   return (
     <div className="card">
       <div className="card__main">
-        <div className="card__soundtrack">
+        <div className="image__container">
+          <img className="image" src={p.image} />
+        </div>
+        <div className="soundtrack">
+          <div className="soundtrack__container"></div>
+          <div className="soundtrack__container-small"></div>
           <iframe
-            // style="border-radius:12px"
-            src="https://open.spotify.com/embed/track/2YFtpiy2WoAQVQbM1SIwES?utm_source=generator&theme=0"
-            width="250"
-            height="112"
+            className="soundtrack__sound"
+            src={p.audio_file}
+            width="47%"
+            height="152"
             frameBorder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
+          {/* <iframe
+            src={p.audio_file}
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe> */}
         </div>
 
         <div className="card__content">
           <div className="card__title">
-            <h1 className="podcast__name">Thanks Greg</h1>
-            <h2 className="podcast__episode">Episode . serialkiller</h2>
+            <h1 className="podcast__name">{p.podcast_title}</h1>
+            <h2 className="podcast__episode">By {p.podcast_name}</h2>
           </div>
-
-          <p className="podcast__description">
-            blablablablaabalhkfejdgekrgjhkgrjgbv
-          </p>
         </div>
+        <div className="podcast__description">{p.description}</div>
 
         <div className="bottom">
           <div className="bottom__icons">
             <img className="bottom__icon" src={plus} />
             <img className="bottom__dots" src={dots} />
           </div>
-          <p className="bottom__time">Sat . 1mn</p>
+          <p className="bottom__time">Sat . {p.length}s</p>
         </div>
       </div>
-      <SideBar />
+
+      <SideBar likes={p.likes} dislikes={p.dislikes} comments={p.comments} />
     </div>
   );
 }
