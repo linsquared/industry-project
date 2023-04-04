@@ -12,7 +12,9 @@ export default function HomePage() {
         <img src={cross} className="homepage__cross" />
         <Button />
       </div>
-      <Card />
+      <div className="homepage__container">
+        <Card />
+      </div>
     </div>
   );
 }
