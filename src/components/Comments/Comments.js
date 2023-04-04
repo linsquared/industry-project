@@ -1,18 +1,17 @@
-import './Comments.scss'
-import persona from '../../assets/images/persona.png';
-import ghost from '../../assets/emojis/ghost.png'
-import heart from '../../assets/emojis/heart.png'
-import hug from '../../assets/emojis/hug.png'
-import roll from '../../assets/emojis/roll.png'
-import sweat from '../../assets/emojis/sweat.png'
-import tongue from '../../assets/emojis/tongue.png'
-import shock from '../../assets/emojis/shock.png'
-import close from '../../assets/icons/close.png'
-import SingleComment from '../../assets/components/SingleComment/SingleComment';
+import "./Comments.scss";
+import persona from "../../assets/images/persona.png";
+import ghost from "../../assets/emojis/ghost.png";
+import heart from "../../assets/emojis/heart.png";
+import hug from "../../assets/emojis/hug.png";
+import roll from "../../assets/emojis/roll.png";
+import sweat from "../../assets/emojis/sweat.png";
+import tongue from "../../assets/emojis/tongue.png";
+import shock from "../../assets/emojis/shock.png";
+import close from "../../assets/icons/close.png";
+import SingleComment from "../SingleComment/SingleComment";
 
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Comments = ({ commentModal, setCommentModal, }) => {
     // func to close the comment box

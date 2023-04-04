@@ -3,12 +3,14 @@ import like from "../../assets/icons/like.png";
 import dislike from "../../assets/icons/dislike.png";
 import comment from "../../assets/icons/comment.png";
 import share from "../../assets/icons/share.png";
-import play from "../../assets/icons/play.png";
 import save from "../../assets/icons/save.png";
+import { useState } from "react";
 import "./SideBar.scss";
 import { useNavigate } from "react-router-dom";
 export default function SideBar({ commentModal, setCommentModal, shareModal, setShareModal }) {
   // const [commentModal, setCommentModal] = useState(false)
+  const [liking, setLiking] = useState(p.likes);
+  const [disliking, setDiskling] = useState(p.dislikes);
 
   const openComments = () => {
     setCommentModal(true);
@@ -28,12 +30,22 @@ export default function SideBar({ commentModal, setCommentModal, shareModal, set
         <img className="sidebar__icon" alt="icon sound" src={sound} />
         <div className="sidebar__main">
           <div className="sidebar__nav">
-            <img className="sidebar__icon" alt="icon like" src={like} />
-            <p className="label">34</p>
+            <img
+              onClick={clickLikes}
+              className="sidebar__icon"
+              alt="icon like"
+              src={like}
+            />
+            <p className="label">{p.likes}</p>
           </div>
           <div className="sidebar__nav">
-            <img className="sidebar__icon" alt="icon dislike" src={dislike} />
-            <p className="label">34</p>
+            <img
+              onClick={clickDislikes}
+              className="sidebar__icon"
+              alt="icon dislike"
+              src={dislike}
+            />
+            <p className="label">{p.dislikes}</p>
           </div>
           <div className="sidebar__nav">
             <img
@@ -42,7 +54,7 @@ export default function SideBar({ commentModal, setCommentModal, shareModal, set
               onClick={openComments}
               alt="comment icon"
             />
-            <p className="label">34</p>
+            <p className="label">{p.comments}</p>
           </div>
         </div>
         <div className="sidebar__bottom">
