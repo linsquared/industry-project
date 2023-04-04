@@ -50,7 +50,11 @@ export default function Card({ commentModal, setCommentModal, p }) {
           <p className="bottom__time">Sat . {p.length}s</p>
         </div>
       </div>
-      <SideBar commentModal={commentModal} setCommentModal={setCommentModal} />
+      <SideBar
+        commentModal={commentModal}
+        setCommentModal={setCommentModal}
+        p={p}
+      />
     </div>
   );
 }
