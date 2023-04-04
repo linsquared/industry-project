@@ -7,7 +7,7 @@ import save from "../../assets/icons/save.png";
 import { useState } from "react";
 import "./SideBar.scss";
 import { useNavigate } from "react-router-dom";
-export default function SideBar({ commentModal, setCommentModal, shareModal, setShareModal }) {
+export default function SideBar({ commentModal, setCommentModal, shareModal, setShareModal, p }) {
   // const [commentModal, setCommentModal] = useState(false)
   const [liking, setLiking] = useState(p.likes);
   const [disliking, setDiskling] = useState(p.dislikes);
