@@ -122,7 +122,7 @@ const podcasts = [
 ];
 
 export default function HomePage() {
-  const [commentModal, setCommentModal] = useState(false)
+  const [commentModal, setCommentModal] = useState(false);
 
   return (
     <div className="homepage">
@@ -131,10 +131,15 @@ export default function HomePage() {
         <Button />
       </div>
       <div className="homepage__container">
-
         {/* <Card commentModal={commentModal} setCommentModal={setCommentModal} /> */}
         {podcasts.map((podcast) => {
-          return <Card p={podcast} />;
+          return (
+            <Card
+              p={podcast}
+              commentModal={commentModal}
+              setCommentModal={setCommentModal}
+            />
+          );
         })}
       </div>
       <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
