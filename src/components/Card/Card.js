@@ -4,8 +4,7 @@ import SideBar from "../SideBar/SideBar";
 import listen from "../../assets/images/listen.png";
 
 import "./Card.scss";
-export default function Card({ commentModal, setCommentModal }) {
-
+export default function Card({ commentModal, setCommentModal, p }) {
   return (
     <div className="card">
       <div className="card__main">
