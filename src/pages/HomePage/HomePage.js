@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
 import Comments from "../../components/Comments/Comments";
 import { useState } from "react";
+import Background from "../../components/Background/Background";
 
 import "./HomePage.scss";
 
@@ -125,6 +126,7 @@ export default function HomePage() {
 
   return (
     <div className="homepage">
+      <Background />
       <div className="homepage__navigation">
         <img src={cross} alt="cross icon" className="homepage__cross" />
         <Button />
