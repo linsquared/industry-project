@@ -7,22 +7,27 @@ import axios from 'axios'
 
 const SingleComment = ({ image, name, comment, likes, id, userComments, setUserComments }) => {
     // function to add likes
-    const addLikes = (e) => {
+    const addLikes = () => {
 
-        setUserComments({ ...userComments, likes: likes + 1 })
 
         axios.put(`http://localhost:8080/comments/${id}`, { likes: likes + 1 })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res)
+                setUserComments(res.data)
+            })
             .catch(err => console.log(err))
-
+        console.log(userComments)
     }
 
     // subtract likes
     const minuslike = (e) => {
-        setUserComments({ ...userComments, likes: likes - 1 })
 
         axios.put(`http://localhost:8080/comments/${id}`, { likes: likes - 1 })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res)
+                setUserComments(res.data)
+
+            })
             .catch(err => console.log(err))
 
     }

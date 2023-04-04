@@ -9,7 +9,6 @@ import tongue from '../../assets/emojis/tongue.png'
 import shock from '../../assets/emojis/shock.png'
 import close from '../../assets/icons/close.png'
 import SingleComment from '../../assets/components/SingleComment/SingleComment';
-import submit from '../../assets/icons/post.png'
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -17,11 +16,12 @@ import axios from 'axios';
 
 const Comments = ({ commentModal, setCommentModal }) => {
     // func to close the comment box
-    const closeComments = (e) => {
+    const closeComments = () => {
         setCommentModal(false)
     }
 
     const [userComments, setUserComments] = useState([])
+
     const [newComment, setNewComment] = useState({
         username: 'justEm202',
         comment: '',
@@ -71,6 +71,8 @@ const Comments = ({ commentModal, setCommentModal }) => {
         axios.post(`http://localhost:8080/comments`, newComment)
             .then(res => {
                 console.log(res)
+                setUserComments([newComment, ...userComments])
+
             })
             .catch(err => console.log(err))
     }
@@ -104,23 +106,6 @@ const Comments = ({ commentModal, setCommentModal }) => {
                     ))}
                 </div>
 
-                {/* {userComments.map(user => (
-                    <>
-                        <div className='comments__user'>
-                            <div className='comments__userIcon'><img className='comments__icon' src={user.image} alt='user icon' /></div>
-                            <div className='comments__info'>
-                                <span className='comments__username'>{user.username}</span>
-                                <p className='comments__comments'>{user.comment}</p>
-                            </div>
-                        </div>
-                        <div className='comments__actions'>
-                            <img className='comments__like comments__thumbs' src={like} alt='like icon' />
-                            <img className='comments__dislike comments__thumbs' src={dislike} alt='dislike icon' />
-                        </div>
-                    </>
-                )
-
-                )} */}
             </div>
 
             <div className='comments__bottom'>
@@ -132,8 +117,6 @@ const Comments = ({ commentModal, setCommentModal }) => {
                     <img className='comments__emoji' onClick={(e) => addEmo(e, shockEmo)} src={shock} alt='shock emoji' />
                     <img className='comments__emoji' onClick={(e) => addEmo(e, tongueEmo)} src={tongue} alt='tongue emoji' />
                     <img className='comments__emoji' onClick={(e) => addEmo(e, sweatEmo)} src={sweat} alt='sweatemoji' />
-                    {/* <img className='comments__emoji' src={sunglass} alt='sunglassemoji' />
-                <img className='comments__emoji' src={hurt} alt=' hurt emoji' /> */}
                 </div>
 
                 <div className='comments__text-wrapper'>
