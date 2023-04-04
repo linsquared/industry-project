@@ -6,24 +6,25 @@
     height: 49.1rem;
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient( #3C2991, #242424, #242424);
+    background: linear-gradient(#3C2991, #242424, #242424);
     border-radius: 10px;
     margin: auto;
     padding: 1.6rem;
     position: relative;
-    z-index:2;
+    z-index: 2;
     margin-bottom: 3.5rem;
 
 
-    &__main{
+    &__main {
         width: 100%;
 
     }
 
-    &__soundtrack{
+    &__soundtrack {
         height: 23.8rem;
 
     }
+
     &__content {
         height: 15rem;
         width: 30rem;
@@ -31,44 +32,37 @@
 
 
     }
-    &__title{
+
+    &__title {}
 
 
-
-
-    }
-
-   
 
 
 }
 
-.test{
+.test {
     background-color: transparent;
 }
 
 .podcast {
     position: relative;
-    &__name{
 
-    }
+    &__name {}
 
-    &__episode{
+    &__episode {}
 
-    }
-
-    &__description{
+    &__description {
         font-size: 1.5rem;
         color: #A2A2A2;
         height: 5rem;
         width: 27rem;
-       position: absolute;
-       z-index: 999;
-       bottom: 19%;
-       
-       
+        position: absolute;
+        z-index: 999;
+        bottom: 19%;
 
-        
+
+
+
 
     }
 
@@ -83,7 +77,8 @@
     position: absolute;
     z-index: 999;
     bottom: 4.2%;
-    &__icons{
+
+    &__icons {
         display: flex;
 
         justify-content: flex-start;
@@ -91,16 +86,17 @@
         align-content: center;
 
     }
-    &__icon{
+
+    &__icon {
         width: 2.4rem;
         height: 2.4rem;
         align-self: center;
 
     }
-    &__time{
 
-    }
-    &__dots{
+    &__time {}
+
+    &__dots {
         width: 2.4rem;
         height: 0.5rem;
         align-self: center;
@@ -109,38 +105,35 @@
 }
 
 .container {
- 
 
 
-    &__small{
-   
 
-    }
+    &__small {}
 }
 
-.soundtrack{
-    bottom:3.5%;
+.soundtrack {
+    bottom: 3.5%;
     width: 34rem;
-   
+
     z-index: 9;
     position: absolute;
-    left:51.7%;
-    
-
-  
+    left: 51.7%;
 
 
 
-    &__container{
-        width: 15.8rem;
+
+
+
+    &__container {
+        width: 16.3rem;
         height: 10rem;
         border-radius: 10px;
-        background-color:#242424;
-        top:0;
+        background-color: #242424;
+        top: 0;
         position: absolute;
-  
 
-        &-small{
+
+        &-small {
             width: 11.9rem;
             height: 5.8rem;
             border-radius: 10px;
@@ -149,20 +142,16 @@
             bottom: 0;
             position: absolute;
             z-index: 2;
-        
+
 
         }
 
-        &__sound{
-           
+        &__sound {
+
             position: absolute;
-        
+
             left: 50%;
-            bottom:0
-
-            
-
-
+            bottom: 0
         }
     }
 
@@ -172,7 +161,7 @@
     width: 17.7rem;
     height: 17.7rem;
     border-radius: 10px;
-   
+
 
     &__container {
         height: 22rem;
@@ -181,4 +170,3 @@
     }
 
 }
-

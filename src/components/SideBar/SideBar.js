@@ -15,7 +15,6 @@ export default function SideBar({ commentModal, setCommentModal }) {
 
   const openComments = () => {
     setCommentModal(true)
-
   }
 
   return (

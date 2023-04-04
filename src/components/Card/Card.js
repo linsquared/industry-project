@@ -6,11 +6,12 @@ import listen from "../../assets/images/listen.png";
 import "./Card.scss";
 export default function Card({ commentModal, setCommentModal, p }) {
 
+  console.log(p.image);
   return (
     <div className="card">
       <div className="card__main">
         <div className="image__container">
-          <img className="image" src={p.image} />
+          <img className="image" src={p.img} />
         </div>
         <div className="soundtrack">
           <div className="soundtrack__container"></div>
