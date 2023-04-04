@@ -25,7 +25,7 @@ const podcasts = [
     shares: 17,
     saves: 81,
     posted_date: "Apr 3",
-    image: require("../../assets/images/designmatters.png"),
+    img: require("../../assets/images/designmatters.png"),
   },
   {
     id: "293HLM",
@@ -43,7 +43,7 @@ const podcasts = [
     shares: 7,
     saves: 2,
     posted_date: "Mar 27",
-    image: require("../../assets/images/anythinggoes.png"),
+    img: require("../../assets/images/anythinggoes.png"),
   },
   {
     id: "SAPVJK",
@@ -61,7 +61,7 @@ const podcasts = [
     shares: 3,
     saves: 100,
     posted_date: "Apr 2",
-    image: require("../../assets/images/callherdaddy.png"),
+    img: require("../../assets/images/callherdaddy.png"),
   },
 
   {
@@ -80,7 +80,7 @@ const podcasts = [
     shares: 29,
     saves: 99,
     posted_date: "Apr 03",
-    image: require("../../assets/images/radiolab.png"),
+    img: require("../../assets/images/radiolab.png"),
   },
   {
     id: "3LA4X3",
@@ -98,7 +98,7 @@ const podcasts = [
     shares: 76,
     saves: 66,
     posted_date: "Thursday",
-    image: require("../../assets/images/serial.png"),
+    img: require("../../assets/images/serial.png"),
   },
 
   {
@@ -117,7 +117,7 @@ const podcasts = [
     shares: 45,
     saves: 60,
     posted_date: "Mar 31",
-    image: require("../../assets/images/adventurezone.png"),
+    img: require("../../assets/images/adventurezone.png"),
   },
 ];
 
@@ -134,7 +134,7 @@ export default function HomePage() {
 
         {/* <Card commentModal={commentModal} setCommentModal={setCommentModal} /> */}
         {podcasts.map((podcast) => {
-          return <Card p={podcast} />;
+          return <Card p={podcast} commentModal={commentModal} setCommentModal={setCommentModal} />;
         })}
       </div>
       <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
