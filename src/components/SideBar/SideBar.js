@@ -6,8 +6,7 @@ import share from "../../assets/icons/share.png";
 import play from "../../assets/icons/play.png";
 import save from "../../assets/icons/save.png";
 import "./SideBar.scss";
-// import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function SideBar({ commentModal, setCommentModal, shareModal, setShareModal }) {
   // const [commentModal, setCommentModal] = useState(false)
 
@@ -16,10 +15,12 @@ export default function SideBar({ commentModal, setCommentModal, shareModal, set
   };
 
   const openShare = () => {
-    setShareModal(true);
-    console.log(shareModal);
+    navigate('/share')
+    // setShareModal(true);
 
   };
+
+  const navigate = useNavigate()
 
   return (
     <>

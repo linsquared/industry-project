@@ -13,7 +13,8 @@ function App() {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/share" element={<Share />} /> */}
+        <Route path="/share" element={<Share />} />
+
 
       </Routes>
     </BrowserRouter>

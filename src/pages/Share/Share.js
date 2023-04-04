@@ -13,9 +13,10 @@ const Share = ({ shareModal, setShareModal }) => {
         console.log('click');
         setShareModal(false)
     }
+    // style={{ display: shareModal ? 'block' : 'none' }}
 
     return (
-        <div className='share' style={{ display: shareModal ? 'block' : 'none' }}>
+        <div className='share' >
             <header className='share__header'>
                 <img className='share__btn' onClick={closeShare} src={close} alt='close button' />
                 <h3 className='share__title'>Share</h3>
