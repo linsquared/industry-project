@@ -16,6 +16,17 @@ const SingleComment = ({ image, name, comment, likes, id, userComments, setUserC
             .catch(err => console.log(err))
 
     }
+
+    // subtract likes
+    const minuslike = (e) => {
+        setUserComments({ ...userComments, likes: likes - 1 })
+
+        axios.put(`http://localhost:8080/comments/${id}`, { likes: likes - 1 })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+
+    }
+
     return (
         <div className='comments__block'>
             <div className='comments__user'>
@@ -31,7 +42,7 @@ const SingleComment = ({ image, name, comment, likes, id, userComments, setUserC
                         src={like} alt='like icon'
                         onClick={addLikes}
                     />{likes}</div>
-                <img className='comments__dislike comments__thumbs' src={dislike} alt='dislike icon' />
+                <img className='comments__dislike comments__thumbs' onClick={minuslike} src={dislike} alt='dislike icon' />
             </div>
         </div>
     )
