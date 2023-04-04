@@ -2,6 +2,7 @@ import "./styles/global.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./assets/components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
+import Comments from "./pages/Comments/Comments";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/comments" element={<Comments />} />
+
       </Routes>
     </BrowserRouter>
   );

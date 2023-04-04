@@ -1,0 +1,144 @@
+@use '../../styles/global.scss' as *;
+
+
+.comments {
+    height: 50rem;
+    position: absolute;
+    bottom: 5rem;
+    background-color: rgb(18, 18, 18);
+    width: 37.7rem;
+    left: 2.5rem;
+    border-radius: 8px;
+    padding: 1.2rem;
+
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__close {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__user {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__thumbs {
+        width: 2.2rem;
+    }
+
+    &__count {
+        display: flex;
+        align-items: flex-end;
+        gap: .2rem;
+        justify-content: center;
+    }
+
+    &__num {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    &__total {
+        font-size: 1.4rem;
+        color: white;
+    }
+
+    &__userIcon {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: grey;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: grey;
+        border-radius: 50%;
+        flex: 1;
+    }
+
+    &__username {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5rem;
+        align-items: flex-end;
+    }
+
+    &__comments {
+        margin-top: 0;
+        padding-top: .8rem;
+        font-size: 1.7rem;
+        color: white;
+        overflow-y: scroll;
+        height: 40rem;
+        width: 30rem;
+    }
+
+    &__bottom {
+        position: absolute;
+        background-color: rgb(18, 18, 18);
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+        width: 37.9rem;
+        right: -.1rem;
+        margin: 0 auto;
+        bottom: 0;
+        height: 15rem;
+        border-top: 1px solid rgb(36, 38, 39);
+        z-index: 10;
+    }
+
+    &__emoji {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-around;
+            padding: 1.2rem;
+        }
+    }
+
+    &__text-wrapper {
+        margin-left: 1.5rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__text {
+        width: 20rem;
+    }
+
+    &__textarea {
+        height: 4.5rem;
+        // border-radius: 40%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 29.5rem;
+        background-color: rgb(45, 46, 47);
+        border: none;
+
+        // & ::placeholder {
+        //     padding: 2rem;
+        // }
+    }
+}
+
+::placeholder {
+    padding: 1rem;
+    font-size: 1.5rem;
+}

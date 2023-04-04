@@ -30,7 +30,11 @@ body {
   font-family: 'Circular', Helvetica, sans-serif;
 }
 
-
+textarea,
+label,
+input {
+  font-family: 'Circular', Helvetica, sans-serif;
+}
 
 html {
   font-size: 62.5%;
@@ -48,7 +52,7 @@ h2 {
 
 }
 
-p{
+p {
 
   font-size: 1.6rem;
   color: #A2A2A2;
@@ -57,7 +61,7 @@ p{
 
 .label {
   font-size: 1.1rem;
-  color:#ffffff;
+  color: #ffffff;
   margin: 0;
   margin-bottom: 0.9rem;
   display: flex;
