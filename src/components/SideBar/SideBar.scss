@@ -1,0 +1,39 @@
+@use "../../styles/global.scss" as*;
+
+
+.sidebar {
+
+    position: absolute;
+    top:3%;
+    right: 3%;
+    height: 35.1rem;
+    width: 4rem;
+    z-index: 999;
+
+
+    &__main{
+        margin-top: 8.1rem;
+        margin-bottom: 2.4rem;
+    }
+
+
+
+    &__icon {
+        width: 3.4rem;
+        height:3.4rem;
+
+    }
+    &__iconb{
+        width: 3.4rem;
+        height:3.4rem;
+        margin-bottom: 0.8rem;
+
+    }
+    &__nav{
+
+    }
+    &__bottom{
+        
+
+    }
+}

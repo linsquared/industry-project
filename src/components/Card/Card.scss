@@ -1,0 +1,172 @@
+@use '../../styles/global.scss' as *;
+
+
+.card {
+    width: 35.1rem;
+    height: 49.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(#3C2991, #242424, #242424);
+    border-radius: 10px;
+    margin: auto;
+    padding: 1.6rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3.5rem;
+
+
+    &__main {
+        width: 100%;
+
+    }
+
+    &__soundtrack {
+        height: 23.8rem;
+
+    }
+
+    &__content {
+        height: 15rem;
+        width: 30rem;
+        margin-bottom: 2.6rem;
+
+
+    }
+
+    &__title {}
+
+
+
+
+}
+
+.test {
+    background-color: transparent;
+}
+
+.podcast {
+    position: relative;
+
+    &__name {}
+
+    &__episode {}
+
+    &__description {
+        font-size: 1.5rem;
+        color: #A2A2A2;
+        height: 5rem;
+        width: 27rem;
+        position: absolute;
+        z-index: 999;
+        bottom: 19%;
+
+
+
+
+
+    }
+
+}
+
+.bottom {
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 27.2rem;
+    position: absolute;
+    z-index: 999;
+    bottom: 4.2%;
+
+    &__icons {
+        display: flex;
+
+        justify-content: flex-start;
+
+        align-content: center;
+
+    }
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        align-self: center;
+
+    }
+
+    &__time {}
+
+    &__dots {
+        width: 2.4rem;
+        height: 0.5rem;
+        align-self: center;
+        margin-left: 2.6rem;
+    }
+}
+
+.container {
+
+
+
+    &__small {}
+}
+
+.soundtrack {
+    bottom: 3.5%;
+    width: 34rem;
+
+    z-index: 9;
+    position: absolute;
+    left: 51.7%;
+
+
+
+
+
+
+    &__container {
+        width: 16.3rem;
+        height: 10rem;
+        border-radius: 10px;
+        background-color: #242424;
+        top: 0;
+        position: absolute;
+
+
+        &-small {
+            width: 11.9rem;
+            height: 5.8rem;
+            border-radius: 10px;
+            background-color: #242424;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 2;
+
+
+        }
+
+        &__sound {
+
+            position: absolute;
+
+            left: 50%;
+            bottom: 0
+        }
+    }
+
+}
+
+.image {
+    width: 17.7rem;
+    height: 17.7rem;
+    border-radius: 10px;
+
+
+    &__container {
+        height: 22rem;
+        display: flex;
+        justify-content: center;
+    }
+
+}

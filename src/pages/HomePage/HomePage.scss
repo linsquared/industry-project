@@ -1,0 +1,36 @@
+@use "../../styles/global.scss" as*;
+
+.homepage {
+    height: 100vh;
+    padding: 2rem;
+    z-index: -32;
+    overflow-y: scroll;
+
+
+    height: 80.5rem;
+   
+
+    &__navigation {
+        margin-top: 3rem;
+        padding: 1.6rem;
+        height: 4.3rem;
+        display: flex;
+        justify-content: flex-start;
+
+        align-items: center;
+
+    }
+
+    &__cross {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1.6rem;
+
+    }
+
+    &__container {
+        margin-top: 2.3rem;
+    
+
+    }
+}
