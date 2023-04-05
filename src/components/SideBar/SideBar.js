@@ -5,12 +5,9 @@ import comment from "../../assets/icons/comment.png";
 import share from "../../assets/icons/share.png";
 import save from "../../assets/icons/save.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./SideBar.scss";
-// import { useState } from "react";
 
-export default function SideBar({ commentModal, setCommentModal, p, setp }) {
-  // const [commentModal, setCommentModal] = useState(false)
+export default function SideBar({ setCommentModal, p, shareModal, setShareModal, setCardId }) {
   const [liking, setLiking] = useState(p.likes);
   const [disliking, setDiskling] = useState(p.dislikes);
 
@@ -18,10 +15,9 @@ export default function SideBar({ commentModal, setCommentModal, p, setp }) {
     setCommentModal(true);
   };
 
-  const navigate = useNavigate();
-
-  const openShare = () => {
-    navigate("/share");
+  const openShare = (e, id) => {
+    setShareModal(true)
+    setCardId(id);
   };
 
   const clickLikes = (id) => {
@@ -70,7 +66,7 @@ export default function SideBar({ commentModal, setCommentModal, p, setp }) {
         </div>
         <div className="sidebar__bottom">
           <img
-            onClick={openShare}
+            onClick={(e) => openShare(e, p.id)}
             className="sidebar__iconb"
             alt="share icon"
             src={share}

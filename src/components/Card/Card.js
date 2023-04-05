@@ -3,7 +3,9 @@ import dots from "../../assets/icons/dots.png";
 import SideBar from "../SideBar/SideBar";
 
 import "./Card.scss";
-export default function Card({ commentModal, setCommentModal, p }) {
+export default function Card({ commentModal, setCommentModal, p, shareModal, setShareModal, cardId, setCardId }) {
+
+  console.log(p.audio_file)
   return (
     <div className="card">
       <div className="card__main">
@@ -23,15 +25,6 @@ export default function Card({ commentModal, setCommentModal, p }) {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
           ></iframe>
-          {/* <iframe
-            src={p.audio_file}
-            width="100%"
-            height="152"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe> */}
         </div>
 
         <div className="card__content">
@@ -54,6 +47,10 @@ export default function Card({ commentModal, setCommentModal, p }) {
         commentModal={commentModal}
         setCommentModal={setCommentModal}
         p={p}
+        shareModal={shareModal}
+        setShareModal={setShareModal}
+        cardId={cardId}
+        setCardId={setCardId}
       />
     </div>
   );

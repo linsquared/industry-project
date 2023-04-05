@@ -1,5 +1,4 @@
 import cross from "../../assets/icons/close.png";
-
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
 import Comments from "../../components/Comments/Comments";
@@ -7,6 +6,7 @@ import { useState } from "react";
 import Background from "../../components/Background/Background";
 
 import "./HomePage.scss";
+import Share from "../Share/Share";
 
 const podcasts = [
   {
@@ -123,27 +123,41 @@ const podcasts = [
 
 export default function HomePage() {
   const [commentModal, setCommentModal] = useState(false);
+  const [shareModal, setShareModal] = useState(false);
+  const [cardId, setCardId] = useState('');
 
   return (
-    <div className="homepage">
-      <Background />
-      <div className="homepage__navigation">
-        <img src={cross} alt="cross icon" className="homepage__cross" />
-        <Button />
+    <>
+      <div className="homepage">
+        <Background />
+        <div className="homepage__navigation">
+          <img src={cross} alt="cross icon" className="homepage__cross" />
+          <Button />
+        </div>
+        <div className="homepage__container">
+          {podcasts.map((podcast) => {
+            return (
+              <>
+                <Card
+                  p={podcast}
+                  commentModal={commentModal}
+                  setCommentModal={setCommentModal}
+                  shareModal={shareModal}
+                  setShareModal={setShareModal}
+                  cardId={cardId}
+                  setCardId={setCardId}
+                />
+              </>
+            );
+          })}
+        </div>
+        <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
+        <Share shareModal={shareModal}
+          setShareModal={setShareModal}
+          podcast={podcasts}
+          cardId={cardId}
+          setCardId={setCardId} />
       </div>
-      <div className="homepage__container">
-        {/* <Card commentModal={commentModal} setCommentModal={setCommentModal} /> */}
-        {podcasts.map((podcast) => {
-          return (
-            <Card
-              p={podcast}
-              commentModal={commentModal}
-              setCommentModal={setCommentModal}
-            />
-          );
-        })}
-      </div>
-      <Comments commentModal={commentModal} setCommentModal={setCommentModal} />
-    </div>
+    </>
   );
 }

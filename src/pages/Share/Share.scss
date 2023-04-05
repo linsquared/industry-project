@@ -8,6 +8,10 @@
     margin-left: 2rem;
     border-top-right-radius: 14px;
     border-top-left-radius: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 15rem;
+    z-index: 100;
 
     &__header {
         height: 5rem;
@@ -137,5 +141,11 @@
         &--link {
             margin-left: 1rem;
         }
+    }
+
+    &__icons {
+        background-color: rgb(30, 31, 32);
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
     }
 }
