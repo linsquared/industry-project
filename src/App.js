@@ -1,8 +1,6 @@
 import "./styles/global.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import HomePage from "./pages/HomePage/HomePage";
-import Comments from "./components/Comments/Comments";
 import Share from "./pages/Share/Share";
 
 function App() {

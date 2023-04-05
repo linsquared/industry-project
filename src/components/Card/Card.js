@@ -5,7 +5,6 @@ import SideBar from "../SideBar/SideBar";
 import "./Card.scss";
 export default function Card({ commentModal, setCommentModal, p, shareModal, setShareModal, cardId, setCardId }) {
 
-  console.log(p.audio_file)
   return (
     <div className="card">
       <div className="card__main">
